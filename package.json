@@ -1,0 +1,19 @@
+{
+  "name": "ascii-art-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://jmhupanen.github.io/ascii-art-generator/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmhupanen/ascii-art-generator.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}
