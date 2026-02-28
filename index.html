@@ -51,7 +51,12 @@
               </svg>
               <h2 class="upload-title">Drop your image here</h2>
               <p class="upload-text">or click to browse</p>
-              <p class="upload-hint">Supports JPG, PNG, GIF, WebP</p>
+              <p class="upload-hint">Supports JPG, PNG, GIF, WebP &bull; Ctrl+V to paste</p>
+            </div>
+            <div class="image-preview" id="imagePreview">
+              <img id="previewImg" alt="Uploaded image preview" />
+              <p class="preview-name" id="previewName"></p>
+              <button class="btn-change" id="changeImageBtn">Change image</button>
             </div>
             <input type="file" id="fileInput" accept="image/*" hidden />
           </div>
@@ -90,10 +95,14 @@
               <input type="range" id="contrastSlider" min="0.5" max="2" step="0.1" value="1" class="slider" />
             </div>
 
-            <div class="control-group">
+            <div class="control-group checkbox-row">
               <label class="checkbox-label">
                 <input type="checkbox" id="invertCheckbox" class="checkbox" />
-                <span>Invert Colors</span>
+                <span>Invert</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="colorCheckbox" class="checkbox" />
+                <span>Color</span>
               </label>
             </div>
 
@@ -103,7 +112,7 @@
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copy to Clipboard
+                Copy
               </button>
               <button id="downloadBtn" class="btn btn-secondary">
                 <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -111,7 +120,15 @@
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                Download
+                TXT
+              </button>
+              <button id="downloadPngBtn" class="btn btn-secondary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                PNG
               </button>
             </div>
           </div>
